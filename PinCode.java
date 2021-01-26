@@ -1,7 +1,12 @@
+import java.util.regex.*;
+
 class PinCode{
+
 	public static void main(String args[]){
 
-	System.out.println("Welcome to the PinCode problem in the master branch");
-
+		Pattern pat = Pattern.compile("^[0-9]{6}");
+		Matcher match = pat.matcher("400088");
+		boolean result = match.matches();
+		System.out.println(result);
 	}
 }
